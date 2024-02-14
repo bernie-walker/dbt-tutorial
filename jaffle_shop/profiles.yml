@@ -5,7 +5,7 @@ jaffle_shop:
       type: postgres
       host: localhost
       user: dbt_pg_admin
-      password: [password]
+      password: "{{ env_var('DBT_PG_PASSWORD') }}"
       port: 5432
       database: jaffle_shop
       schema: dbt_trial
